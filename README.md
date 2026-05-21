@@ -102,7 +102,7 @@ AI:  Archived to openspec/changes/archive/2025-01-23-add-dark-mode/
 Install OpenSpec globally:
 
 ```bash
-npm install -g @fission-ai/openspec@latest
+npm install -g @novaraworks/openspec@latest
 ```
 
 Then navigate to your project directory and initialize:
@@ -162,7 +162,7 @@ AI coding assistants are powerful but unpredictable when requirements live only 
 **Upgrade the package**
 
 ```bash
-npm install -g @fission-ai/openspec@latest
+npm install -g @novaraworks/openspec@latest
 ```
 
 **Refresh agent instructions**
