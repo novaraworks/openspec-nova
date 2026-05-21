@@ -26,7 +26,7 @@
 >
 > The Step 0 prompt is a single line injected via thin wrapper templates (`_nova-step0.ts` + `*.nova.ts`). Upstream content edits flow through automatically on rebase — no merge conflicts on the core logic.
 >
-> **Practical effect:** multi-task apply runs that previously ran serially on an expensive model now routinely self-schedule as parallel subagents on a cheaper model, cutting both wall time and API cost.
+> **Practical effect:** multi-task apply runs that previously ran serially on an expensive model now routinely self-schedule as parallel subagents on a cheaper model, cutting both wall time and API cost. See [docs/delegation-comparison.md](docs/delegation-comparison.md) for a measured sample run — ~10× main-context compression and ~5–15× per-task cost reduction versus running the same work on Opus directly.
 >
 > This fork closely tracks upstream and rebases regularly.
 >
