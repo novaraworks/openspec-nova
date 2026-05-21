@@ -14,12 +14,19 @@
   <a href="https://discord.gg/YctCnvvshC"><img alt="Discord" src="https://img.shields.io/discord/1411657095639601154?style=flat-square&logo=discord&logoColor=white&label=Discord&suffix=%20online" /></a>
 </p>
 
-> **Fork notice — `@novaraworks/openspec`**
+> **Fork — `@novaraworks/openspec`**
 >
-> This is a fork of [Fission-AI/OpenSpec](https://github.com/Fission-AI/OpenSpec) published independently as `@novaraworks/openspec`.
+> This is a fork of [Fission-AI/OpenSpec](https://github.com/Fission-AI/OpenSpec) maintained by [NovaraWorks](https://github.com/novaraworks). It tracks upstream closely and adds opinionated enhancements around cost-aware execution.
 >
-> Fork-side increments (additions not yet upstream):
-> - **apply delegation strategy** — adds a Step 0 to `/opsx:apply` for the LLM to assess subagent + cheaper-model delegation before starting implementation.
+> **What's different from upstream**
+>
+> | Enhancement | Commands affected | What it does |
+> |---|---|---|
+> | **Delegation Step 0** | `/opsx:apply`, `/opsx:archive`, `/opsx:bulk-archive` | Before starting work, the LLM explicitly considers whether to spawn subagents and/or switch to a cheaper model (e.g., Sonnet). No hard rules — the model decides at runtime based on task complexity. |
+>
+> The Step 0 prompt is a single line injected via thin wrapper templates (`_nova-step0.ts` + `*.nova.ts`). Upstream content edits flow through automatically on rebase — no merge conflicts on the core logic.
+>
+> **Practical effect:** multi-task apply runs that previously ran serially on an expensive model now routinely self-schedule as parallel subagents on a cheaper model, cutting both wall time and API cost.
 >
 > This fork closely tracks upstream and rebases regularly.
 >
