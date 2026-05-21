@@ -14,6 +14,17 @@
   <a href="https://discord.gg/YctCnvvshC"><img alt="Discord" src="https://img.shields.io/discord/1411657095639601154?style=flat-square&logo=discord&logoColor=white&label=Discord&suffix=%20online" /></a>
 </p>
 
+> **Fork notice — `@novaraworks/openspec`**
+>
+> This is a fork of [Fission-AI/OpenSpec](https://github.com/Fission-AI/OpenSpec) published independently as `@novaraworks/openspec`.
+>
+> Fork-side increments (additions not yet upstream):
+> - **apply delegation strategy** — adds a Step 0 to `/opsx:apply` for the LLM to assess subagent + cheaper-model delegation before starting implementation.
+>
+> This fork closely tracks upstream and rebases regularly.
+>
+> **Rebasing from upstream:** `git fetch upstream && git rebase upstream/main`. Identity-layer files (`package.json` identity fields, this README notice, `.github/workflows/release.yml`) are always taken from the fork side; everything else follows upstream.
+
 <details>
 <summary><strong>The most loved spec framework.</strong></summary>
 

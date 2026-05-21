@@ -1,6 +1,6 @@
 {
-  "name": "@fission-ai/openspec",
-  "version": "1.3.1",
+  "name": "@novaraworks/openspec",
+  "version": "0.1.0",
   "description": "AI-native system for spec-driven development",
   "keywords": [
     "openspec",
@@ -9,13 +9,16 @@
     "ai",
     "development"
   ],
-  "homepage": "https://github.com/Fission-AI/OpenSpec",
+  "homepage": "https://github.com/novaraworks/openspec-nova",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Fission-AI/OpenSpec"
+    "url": "git+https://github.com/novaraworks/openspec-nova.git"
+  },
+  "bugs": {
+    "url": "https://github.com/novaraworks/openspec-nova/issues"
   },
   "license": "MIT",
-  "author": "OpenSpec Contributors",
+  "author": "NovaraWorks",
   "type": "module",
   "publishConfig": {
     "access": "public"
